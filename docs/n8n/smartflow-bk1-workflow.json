@@ -1,0 +1,133 @@
+{
+    "updatedAt": "2026-05-26T06:58:21.587Z",
+    "createdAt": "2026-05-26T06:58:21.587Z",
+    "id": "wmFkoTESoxqj0Scl",
+    "name": "SMARTFLOW-BK1 \u2014 SmartFlow Booking System",
+    "description": null,
+    "active": true,
+    "isArchived": false,
+    "nodes": [
+        {
+            "id": "wh-get-1",
+            "name": "GET \u2014 Get Booked Slots",
+            "type": "n8n-nodes-base.webhook",
+            "typeVersion": 2,
+            "position": [
+                250,
+                200
+            ],
+            "parameters": {
+                "httpMethod": "GET",
+                "path": "smartflow-get-booked-slots",
+                "responseMode": "responseNode",
+                "options": {}
+            },
+            "webhookId": "0bafbbb0-e1bf-4898-a921-b912bb2fc0c1"
+        },
+        {
+            "id": "wh-post-1",
+            "name": "POST \u2014 Book Slot",
+            "type": "n8n-nodes-base.webhook",
+            "typeVersion": 2,
+            "position": [
+                250,
+                450
+            ],
+            "parameters": {
+                "httpMethod": "POST",
+                "path": "smartflow-book-slot",
+                "responseMode": "responseNode",
+                "options": {}
+            },
+            "webhookId": "be56912e-fcd4-4c86-9c01-82283194be75"
+        }
+    ],
+    "connections": {},
+    "settings": {
+        "executionOrder": "v1"
+    },
+    "staticData": null,
+    "meta": null,
+    "pinData": null,
+    "versionId": "ecdc43dc-69b7-4f70-b3d7-e6431bc3cf71",
+    "activeVersionId": "ecdc43dc-69b7-4f70-b3d7-e6431bc3cf71",
+    "versionCounter": 3,
+    "triggerCount": 2,
+    "shared": [
+        {
+            "updatedAt": "2026-05-26T06:58:21.591Z",
+            "createdAt": "2026-05-26T06:58:21.591Z",
+            "role": "workflow:owner",
+            "workflowId": "wmFkoTESoxqj0Scl",
+            "projectId": "PQJbC8ACd7qB7dgY",
+            "project": {
+                "updatedAt": "2025-05-12T07:31:15.638Z",
+                "createdAt": "2025-05-12T07:21:50.387Z",
+                "id": "PQJbC8ACd7qB7dgY",
+                "name": "Ambrose Voon <ambrosevoon@gmail.com>",
+                "type": "personal",
+                "icon": null,
+                "description": null,
+                "creatorId": "aeb55c5e-6222-46b4-86b8-68076a8d376a"
+            }
+        }
+    ],
+    "tags": [],
+    "activeVersion": {
+        "updatedAt": "2026-05-26T06:58:21.593Z",
+        "createdAt": "2026-05-26T06:58:21.593Z",
+        "versionId": "ecdc43dc-69b7-4f70-b3d7-e6431bc3cf71",
+        "workflowId": "wmFkoTESoxqj0Scl",
+        "nodes": [
+            {
+                "id": "wh-get-1",
+                "name": "GET \u2014 Get Booked Slots",
+                "type": "n8n-nodes-base.webhook",
+                "typeVersion": 2,
+                "position": [
+                    250,
+                    200
+                ],
+                "parameters": {
+                    "httpMethod": "GET",
+                    "path": "smartflow-get-booked-slots",
+                    "responseMode": "responseNode",
+                    "options": {}
+                },
+                "webhookId": "0bafbbb0-e1bf-4898-a921-b912bb2fc0c1"
+            },
+            {
+                "id": "wh-post-1",
+                "name": "POST \u2014 Book Slot",
+                "type": "n8n-nodes-base.webhook",
+                "typeVersion": 2,
+                "position": [
+                    250,
+                    450
+                ],
+                "parameters": {
+                    "httpMethod": "POST",
+                    "path": "smartflow-book-slot",
+                    "responseMode": "responseNode",
+                    "options": {}
+                },
+                "webhookId": "be56912e-fcd4-4c86-9c01-82283194be75"
+            }
+        ],
+        "connections": {},
+        "authors": "Ambrose Voon",
+        "name": null,
+        "description": null,
+        "autosaved": false,
+        "workflowPublishHistory": [
+            {
+                "createdAt": "2026-05-26T06:58:32.866Z",
+                "id": 669,
+                "workflowId": "wmFkoTESoxqj0Scl",
+                "versionId": "ecdc43dc-69b7-4f70-b3d7-e6431bc3cf71",
+                "event": "activated",
+                "userId": "aeb55c5e-6222-46b4-86b8-68076a8d376a"
+            }
+        ]
+    }
+}
