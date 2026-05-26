@@ -36,10 +36,10 @@
         <li><a href="#">Resources <svg class="chevron" viewBox="0 0 12 8" fill="none"><path d="M1 1l5 5 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></a></li>
       </ul>
 
-      <a href="#contact" class="btn btn-primary nav-cta">
+      <button class="btn btn-primary nav-cta book-btn">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><rect x="3" y="4" width="18" height="18" rx="2" stroke="currentColor" stroke-width="2"/><path d="M16 2v4M8 2v4M3 10h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
         Book a Free Call
-      </a>
+      </button>
     </nav>
   </header>
 
@@ -50,10 +50,10 @@
         <h1>Smarter Automation.<br>Stronger Real Estate<br>Businesses.</h1>
         <p class="hero-sub">SmartFlow Automation helps real estate agencies save time, nurture leads, and close more deals with intelligent automation.</p>
         <div class="hero-btns">
-          <a href="#contact" class="btn btn-primary">
+          <button class="btn btn-primary book-btn">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><rect x="3" y="4" width="18" height="18" rx="2" stroke="currentColor" stroke-width="2"/><path d="M16 2v4M8 2v4M3 10h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
             Book a Free Call
-          </a>
+          </button>
           <a href="#services" class="btn btn-outline">See Our Services &rarr;</a>
         </div>
 
@@ -327,10 +327,10 @@
         <p>Let's build the perfect automation system for your agency.</p>
       </div>
       <div class="cta-right">
-        <a href="mailto:hello@smartflowautomation.com" class="btn btn-primary btn-lg">
+        <button class="btn btn-primary btn-lg book-btn">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><rect x="3" y="4" width="18" height="18" rx="2" stroke="currentColor" stroke-width="2"/><path d="M16 2v4M8 2v4M3 10h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
           Book a Free Strategy Call
-        </a>
+        </button>
       </div>
     </div>
   </section>
@@ -419,5 +419,147 @@
   </footer>
 
   <script src="script.js"></script>
+
+  <!-- ── BOOKING MODAL ─────────────────────────────────────── -->
+  <div id="booking-backdrop" class="bk-backdrop" role="dialog" aria-modal="true" aria-label="Book a Free Strategy Call" aria-hidden="true">
+    <div id="booking-modal" class="bk-modal">
+
+      <!-- Mobile drag handle -->
+      <div class="bk-drag-handle"></div>
+
+      <!-- Header -->
+      <div class="bk-header">
+        <div class="bk-header-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+            <rect x="3" y="4" width="18" height="18" rx="2" stroke="currentColor" stroke-width="2"/>
+            <path d="M16 2v4M8 2v4M3 10h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <div class="bk-header-text">
+          <h2 class="bk-title">Book a Free Strategy Call</h2>
+          <p class="bk-subtitle">30 minutes &middot; No obligation &middot; AWST (Perth time)</p>
+        </div>
+        <button class="bk-close" id="bk-close-btn" aria-label="Close booking modal">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+            <path d="M18 6L6 18M6 6l12 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </button>
+      </div>
+
+      <!-- Progress bar -->
+      <div class="bk-progress">
+        <div class="bk-progress-bar" id="bk-progress-bar" style="width:33%"></div>
+      </div>
+
+      <!-- Steps -->
+      <div class="bk-body">
+
+        <!-- STEP 1: Date picker -->
+        <div class="bk-step" id="bk-step-1">
+          <p class="bk-step-label">Step 1 of 3 &mdash; Choose a Date</p>
+          <div class="bk-cal">
+            <div class="bk-cal-nav">
+              <button class="bk-cal-nav-btn" id="bk-cal-prev" aria-label="Previous month">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M15 18l-6-6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </button>
+              <span class="bk-cal-month" id="bk-cal-month">June 2026</span>
+              <button class="bk-cal-nav-btn" id="bk-cal-next" aria-label="Next month">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M9 18l6-6-6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </button>
+            </div>
+            <div class="bk-cal-weekdays">
+              <span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span><span>Sun</span>
+            </div>
+            <div class="bk-cal-grid" id="bk-cal-grid"></div>
+          </div>
+        </div>
+
+        <!-- STEP 2: Time slot picker -->
+        <div class="bk-step bk-step--hidden" id="bk-step-2">
+          <p class="bk-step-label">Step 2 of 3 &mdash; Choose a Time</p>
+          <p class="bk-selected-date" id="bk-selected-date-label"></p>
+          <div class="bk-slots-grid" id="bk-slots-grid"></div>
+          <p class="bk-no-slots" id="bk-no-slots" hidden>No slots available for this day &mdash; please choose another date.</p>
+          <button class="bk-back-btn" id="bk-back-to-1">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M19 12H5M12 5l-7 7 7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Back
+          </button>
+        </div>
+
+        <!-- STEP 3: Contact form -->
+        <div class="bk-step bk-step--hidden" id="bk-step-3">
+          <p class="bk-step-label">Step 3 of 3 &mdash; Your Details</p>
+          <div class="bk-booking-chip" id="bk-booking-chip">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none"><rect x="3" y="4" width="18" height="18" rx="2" stroke="currentColor" stroke-width="2"/><path d="M16 2v4M8 2v4M3 10h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+            <span id="bk-chip-label"></span>
+            <button class="bk-chip-edit" id="bk-chip-edit">Edit</button>
+          </div>
+          <form class="bk-form" id="bk-form" novalidate>
+            <div class="bk-field">
+              <input type="text" id="bk-name" class="bk-input" autocomplete="name" required placeholder=" ">
+              <label for="bk-name" class="bk-label">Full Name <span class="bk-req">*</span></label>
+            </div>
+            <div class="bk-field">
+              <input type="email" id="bk-email" class="bk-input" autocomplete="email" required placeholder=" ">
+              <label for="bk-email" class="bk-label">Email Address <span class="bk-req">*</span></label>
+            </div>
+            <div class="bk-field">
+              <input type="tel" id="bk-phone" class="bk-input" autocomplete="tel" required placeholder=" ">
+              <label for="bk-phone" class="bk-label">Phone Number <span class="bk-req">*</span></label>
+            </div>
+            <div class="bk-field">
+              <input type="text" id="bk-agency" class="bk-input" autocomplete="organization" required placeholder=" ">
+              <label for="bk-agency" class="bk-label">Agency / Company <span class="bk-req">*</span></label>
+            </div>
+            <div class="bk-field">
+              <textarea id="bk-message" class="bk-input bk-textarea" rows="3" placeholder=" "></textarea>
+              <label for="bk-message" class="bk-label">Message <span class="bk-optional">(optional)</span></label>
+            </div>
+            <div class="bk-error-banner" id="bk-error-banner" hidden></div>
+            <button type="submit" class="bk-submit-btn" id="bk-submit-btn">
+              <span class="bk-submit-text">Confirm Booking</span>
+              <svg class="bk-spinner" id="bk-spinner" viewBox="0 0 24 24" fill="none" hidden>
+                <circle cx="12" cy="12" r="9" stroke="rgba(255,255,255,0.3)" stroke-width="3"/>
+                <path d="M12 3a9 9 0 019 9" stroke="white" stroke-width="3" stroke-linecap="round"/>
+              </svg>
+            </button>
+          </form>
+          <button class="bk-back-btn" id="bk-back-to-1-from-3">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M19 12H5M12 5l-7 7 7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Change date / time
+          </button>
+        </div>
+
+        <!-- SUCCESS screen -->
+        <div class="bk-step bk-step--hidden" id="bk-step-success">
+          <div class="bk-success">
+            <div class="bk-success-graphic">
+              <svg class="bk-success-svg" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle class="bk-ring" cx="40" cy="40" r="36"
+                  stroke="#2563EB" stroke-width="4"
+                  stroke-dasharray="226.2" stroke-dashoffset="226.2"
+                  stroke-linecap="round" transform="rotate(-90 40 40)"/>
+                <path class="bk-check" d="M24 40l12 12 20-20"
+                  stroke="#2563EB" stroke-width="4.5"
+                  stroke-linecap="round" stroke-linejoin="round"
+                  stroke-dasharray="47" stroke-dashoffset="47"/>
+              </svg>
+              <div class="bk-confetti" id="bk-confetti" aria-hidden="true"></div>
+            </div>
+            <h3 class="bk-success-title" id="bk-success-title">You're booked in!</h3>
+            <div class="bk-success-details" id="bk-success-details">
+              <p class="bk-success-name" id="bk-success-name"></p>
+              <p class="bk-success-datetime" id="bk-success-date"></p>
+              <p class="bk-success-time" id="bk-success-time"></p>
+            </div>
+            <p class="bk-success-note">A confirmation email is on its way to your inbox.</p>
+            <button class="bk-success-close btn btn-primary" id="bk-success-close">Close</button>
+          </div>
+        </div>
+
+      </div><!-- /bk-body -->
+    </div><!-- /bk-modal -->
+  </div><!-- /bk-backdrop -->
+
 </body>
 </html>
