@@ -21,7 +21,6 @@
       <li><a href="#">HOME</a></li>
       <li><a href="#services">WHAT WE DO</a></li>
       <li><a href="#how-it-works">HOW IT WORKS</a></li>
-      <li><a href="#pricing">PRICING</a></li>
       <li><a href="#about">ABOUT</a></li>
       <li><a href="#faq">FAQ</a></li>
     </ul>
