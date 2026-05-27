@@ -121,7 +121,7 @@ ul { list-style: none; }
 }
 .logo-icon { display: flex; flex-shrink: 0; }
 .logo-img {
-  height: 108px;
+  height: 160px;
   width: auto;
   display: block;
   object-fit: contain;
