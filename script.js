@@ -21,7 +21,9 @@
       <li><a href="#">HOME</a></li>
       <li><a href="#services">WHAT WE DO</a></li>
       <li><a href="#how-it-works">HOW IT WORKS</a></li>
-      <li><a href="#benefits">BENEFITS</a></li>
+      <li><a href="#pricing">PRICING</a></li>
+      <li><a href="#about">ABOUT</a></li>
+      <li><a href="#faq">FAQ</a></li>
     </ul>
     <button class="btn btn-gold book-btn" style="width:100%;justify-content:center;font-size:0.82rem;letter-spacing:0.5px">
       <svg width="14" height="14" viewBox="0 0 24 24" fill="none">
