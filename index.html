@@ -6,7 +6,7 @@
   <title>SmartFlow Automation — Smarter Automation for Real Estate Agencies</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -15,322 +15,258 @@
   <header class="header">
     <nav class="nav container">
       <a href="#" class="logo">
-        <div class="logo-icon">
-          <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
-            <rect width="28" height="28" rx="7" fill="#2563EB"/>
-            <path d="M7 19C7 16 10 14 14 14C18 14 21 12 21 9" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
-            <path d="M7 9C7 12 10 14 14 14C18 14 21 16 21 19" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
-          </svg>
-        </div>
+        <svg class="logo-icon" width="40" height="44" viewBox="0 0 40 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="sg" x1="4" y1="4" x2="36" y2="42" gradientUnits="userSpaceOnUse">
+              <stop offset="0%" stop-color="#14C8FF"/>
+              <stop offset="45%" stop-color="#10E096"/>
+              <stop offset="100%" stop-color="#88EE00"/>
+            </linearGradient>
+          </defs>
+          <path d="M30 6C23 2 9 4 6 13C3 22 11 25 18 28C25 31 33 34 31 42C29 48 15 46 7 42"
+            stroke="url(#sg)" stroke-width="5.5" stroke-linecap="round" fill="none"/>
+        </svg>
         <div class="logo-text">
           <span class="logo-name">SmartFlow</span>
-          <span class="logo-sub">AUTOMATION</span>
+          <span class="logo-sub">&#8212; AUTOMATION &#8212;</span>
         </div>
       </a>
 
       <ul class="nav-links">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Services <svg class="chevron" viewBox="0 0 12 8" fill="none"><path d="M1 1l5 5 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></a></li>
-        <li><a href="#">Solutions <svg class="chevron" viewBox="0 0 12 8" fill="none"><path d="M1 1l5 5 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></a></li>
-        <li><a href="#">About Us</a></li>
-        <li><a href="#">Resources <svg class="chevron" viewBox="0 0 12 8" fill="none"><path d="M1 1l5 5 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></a></li>
+        <li><a href="#" class="nav-active">HOME</a></li>
+        <li><a href="#services">WHAT WE DO</a></li>
+        <li><a href="#how-it-works">HOW IT WORKS</a></li>
+        <li><a href="#benefits">BENEFITS</a></li>
       </ul>
 
-      <button class="btn btn-primary nav-cta book-btn">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><rect x="3" y="4" width="18" height="18" rx="2" stroke="currentColor" stroke-width="2"/><path d="M16 2v4M8 2v4M3 10h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-        Book a Free Call
+      <button class="btn btn-gold nav-cta book-btn">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        BOOK A CALL
       </button>
     </nav>
   </header>
 
   <!-- ── HERO ─────────────────────────────────────────────── -->
-  <section class="hero">
-    <div class="container hero-inner">
+  <section class="hero" id="home">
+    <div class="hero-bg">
+      <img
+        src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=1600&h=800&fit=crop&q=85"
+        alt="Luxury modern property"
+      >
+    </div>
+    <div class="hero-overlay"></div>
+    <div class="container hero-content">
       <div class="hero-text">
-        <h1>Smarter Automation.<br>Stronger Real Estate<br>Businesses.</h1>
-        <p class="hero-sub">SmartFlow Automation helps real estate agencies save time, nurture leads, and close more deals with intelligent automation.</p>
+        <h1>More Leads.<br>Less Admin.<br><span class="text-gold">Better Results.</span></h1>
+        <div class="hero-rule">
+          <span class="rule-line"></span>
+          <span class="rule-diamond"></span>
+          <span class="rule-line"></span>
+        </div>
+        <p>Smart automation systems for real estate agencies that save time, respond faster, and close more deals.</p>
         <div class="hero-btns">
-          <button class="btn btn-primary book-btn">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><rect x="3" y="4" width="18" height="18" rx="2" stroke="currentColor" stroke-width="2"/><path d="M16 2v4M8 2v4M3 10h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-            Book a Free Call
+          <button class="btn btn-gold btn-hero book-btn">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+            BOOK A CALL
           </button>
-          <a href="#services" class="btn btn-outline">See Our Services &rarr;</a>
-        </div>
-
-        <div class="hero-stats">
-          <div class="hstat">
-            <svg class="hstat-icon" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="#2563EB" stroke-width="2"/><path d="M12 7v5l3 3" stroke="#2563EB" stroke-width="2" stroke-linecap="round"/></svg>
-            <span>Save 10+ Hours<br><strong>Every Week</strong></span>
-          </div>
-          <div class="hstat">
-            <svg class="hstat-icon" viewBox="0 0 24 24" fill="none"><rect x="3" y="12" width="4" height="9" rx="1" fill="#2563EB"/><rect x="10" y="7" width="4" height="14" rx="1" fill="#2563EB"/><rect x="17" y="3" width="4" height="18" rx="1" fill="#2563EB"/></svg>
-            <span>Convert More Leads<br><strong>Into Clients</strong></span>
-          </div>
-          <div class="hstat">
-            <svg class="hstat-icon" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="#2563EB" stroke-width="2"/><path d="M8 12.5c1 1.5 2 2 4 2s3-.5 4-2" stroke="#2563EB" stroke-width="2" stroke-linecap="round"/><circle cx="9" cy="9.5" r="1" fill="#2563EB"/><circle cx="15" cy="9.5" r="1" fill="#2563EB"/></svg>
-            <span>Delight Clients With<br><strong>Better Experience</strong></span>
-          </div>
-        </div>
-      </div>
-
-      <div class="hero-visual">
-        <div class="hero-img-wrap">
-          <img
-            src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=560&h=560&fit=crop&q=80"
-            alt="Modern property managed with SmartFlow Automation"
-            class="hero-img"
-          >
-
-          <!-- Floating cards -->
-          <div class="float-card float-card--top">
-            <div class="float-icon float-icon--blue">
-              <svg viewBox="0 0 24 24" fill="none"><rect x="2" y="4" width="20" height="16" rx="3" stroke="currentColor" stroke-width="2"/><path d="M2 8l10 7 10-7" stroke="currentColor" stroke-width="2"/></svg>
-            </div>
-            <span>Automated Email Campaigns</span>
-          </div>
-
-          <div class="float-card float-card--left">
-            <div class="float-icon float-icon--orange">
-              <svg viewBox="0 0 24 24" fill="none"><path d="M18 8A6 6 0 006 8c0 7-3 9-3 9h18s-3-2-3-9M13.73 21a2 2 0 01-3.46 0" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </div>
-            <span>Smart Follow-ups</span>
-          </div>
-
-          <div class="float-card float-card--right">
-            <div class="float-icon float-icon--green">
-              <svg viewBox="0 0 24 24" fill="none"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="9" cy="7" r="4" stroke="currentColor" stroke-width="2"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-            </div>
-            <span>Lead Nurturing</span>
-          </div>
-
-          <div class="float-card float-card--bottom">
-            <div class="float-icon float-icon--purple">
-              <svg viewBox="0 0 24 24" fill="none"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </div>
-            <span>Performance Tracking</span>
-          </div>
-
-          <!-- Connector dots -->
-          <div class="connector c1"></div>
-          <div class="connector c2"></div>
-          <div class="connector c3"></div>
-          <div class="connector c4"></div>
+          <a href="#how-it-works" class="btn btn-ghost-white btn-hero">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/><polygon points="10 8 16 12 10 16 10 8" fill="currentColor"/></svg>
+            SEE HOW IT WORKS
+          </a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ── TRUSTED BY ─────────────────────────────────────────── -->
-  <section class="trusted">
+  <!-- ── BENEFITS BAR ──────────────────────────────────────── -->
+  <section class="benefits-bar" id="benefits">
     <div class="container">
-      <p class="trusted-label">TRUSTED BY REAL ESTATE PROFESSIONALS</p>
-      <div class="trusted-logos">
-        <div class="trust-logo">
-          <svg viewBox="0 0 24 24" fill="none" class="trust-icon"><path d="M3 21h18M3 7l9-4 9 4M4 7v14M20 7v14M8 21v-4h8v4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          <span>URBAN<br><small>PROPERTIES</small></span>
+      <div class="benefits-grid">
+
+        <div class="benefit-item sf-fade">
+          <div class="benefit-icon">
+            <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.8"/><path d="M12 7v5l3 3" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+          </div>
+          <h3>SAVE TIME</h3>
+          <p>Automate repetitive tasks and free up your day.</p>
         </div>
-        <div class="trust-logo">
-          <svg viewBox="0 0 24 24" fill="none" class="trust-icon"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.5"/><path d="M12 3C12 3 8 7 8 12s4 9 4 9M12 3c0 0 4 4 4 9s-4 9-4 9M3 12h18" stroke="currentColor" stroke-width="1.5"/></svg>
-          <span>SKYLINE<br><small>REALTY</small></span>
+
+        <div class="benefit-item sf-fade">
+          <div class="benefit-icon">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <h3>RESPOND FASTER</h3>
+          <p>Never miss a lead. Reply instantly, 24/7.</p>
         </div>
-        <div class="trust-logo">
-          <svg viewBox="0 0 24 24" fill="none" class="trust-icon"><path d="M3 21l9-9 9 9M5 19V10l7-7 7 7v9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          <span>HORIZON<br><small>HOMES</small></span>
+
+        <div class="benefit-item sf-fade">
+          <div class="benefit-icon">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><circle cx="9" cy="7" r="4" stroke="currentColor" stroke-width="1.8"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+          </div>
+          <h3>NURTURE MORE LEADS</h3>
+          <p>Build relationships that turn into opportunities.</p>
         </div>
-        <div class="trust-logo">
-          <svg viewBox="0 0 24 24" fill="none" class="trust-icon"><rect x="3" y="3" width="18" height="18" rx="2" stroke="currentColor" stroke-width="1.5"/><path d="M3 9h18M9 21V9" stroke="currentColor" stroke-width="1.5"/></svg>
-          <span>THE ADDRESS<br><small>COLLECTIVE</small></span>
+
+        <div class="benefit-item sf-fade">
+          <div class="benefit-icon">
+            <svg viewBox="0 0 24 24" fill="none"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><polyline points="17 6 23 6 23 12" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <h3>CLOSE MORE DEALS</h3>
+          <p>More conversations. More bookings. More sales.</p>
         </div>
-        <div class="trust-logo">
-          <svg viewBox="0 0 24 24" fill="none" class="trust-icon"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          <span>PRIME<br><small>&nbsp;</small></span>
-        </div>
+
       </div>
     </div>
   </section>
 
-  <!-- ── SERVICES ──────────────────────────────────────────── -->
-  <section class="services" id="services">
+  <!-- ── HOW IT WORKS ──────────────────────────────────────── -->
+  <section class="how-section" id="how-it-works">
     <div class="container">
-      <div class="section-header">
-        <h2>What We <span class="highlight">Automate</span> for Real Estate Agencies</h2>
-        <p class="section-sub">Focus on building relationships. We'll handle the repetitive tasks.</p>
+      <div class="section-ornament">
+        <span class="orn-line"></span>
+        <span class="orn-diamond"></span>
+        <span class="orn-line"></span>
       </div>
+      <h2 class="section-heading">HOW IT WORKS</h2>
 
-      <div class="services-grid">
+      <div class="steps-row">
 
-        <div class="scard">
-          <div class="scard-icon scard-icon--blue">
-            <svg viewBox="0 0 24 24" fill="none"><rect x="2" y="4" width="20" height="16" rx="3" stroke="currentColor" stroke-width="2"/><path d="M2 8l10 7 10-7" stroke="currentColor" stroke-width="2"/></svg>
+        <div class="step sf-fade">
+          <div class="step-circle">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="10" r="3" stroke="currentColor" stroke-width="1.8"/></svg>
           </div>
-          <h3>Automated Email Systems</h3>
-          <p>Nurture leads, send property updates, follow ups & more on autopilot.</p>
+          <div class="step-badge">1</div>
+          <h3>CAPTURE</h3>
+          <p>We capture leads from all your channels.</p>
         </div>
 
-        <div class="scard">
-          <div class="scard-icon scard-icon--green">
-            <svg viewBox="0 0 24 24" fill="none"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="9" cy="7" r="4" stroke="currentColor" stroke-width="2"/><line x1="19" y1="8" x2="19" y2="14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><line x1="22" y1="11" x2="16" y2="11" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        <div class="step-dashes"></div>
+
+        <div class="step sf-fade">
+          <div class="step-circle">
+            <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="1.8"/><path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 010 2.83 2 2 0 01-2.83 0l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-4 0v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 01-2.83 0 2 2 0 010-2.83l.06-.06A1.65 1.65 0 004.68 15a1.65 1.65 0 00-1.51-1H3a2 2 0 010-4h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 012.83-2.83l.06.06A1.65 1.65 0 009 4.68a1.65 1.65 0 001-1.51V3a2 2 0 014 0v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 012.83 2.83l-.06.06A1.65 1.65 0 0019.4 9a1.65 1.65 0 001.51 1H21a2 2 0 010 4h-.09a1.65 1.65 0 00-1.51 1z" stroke="currentColor" stroke-width="1.8"/></svg>
           </div>
-          <h3>Lead Capture &amp; Nurturing</h3>
-          <p>Capture leads from your website, portals &amp; social media and nurture them automatically.</p>
+          <div class="step-badge">2</div>
+          <h3>AUTOMATE</h3>
+          <p>We engage, nurture and qualify leads automatically.</p>
         </div>
 
-        <div class="scard">
-          <div class="scard-icon scard-icon--orange">
-            <svg viewBox="0 0 24 24" fill="none"><rect x="3" y="4" width="18" height="18" rx="2" stroke="currentColor" stroke-width="2"/><path d="M16 2v4M8 2v4M3 10h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="8" cy="16" r="1.5" fill="currentColor"/><circle cx="12" cy="16" r="1.5" fill="currentColor"/></svg>
+        <div class="step-dashes"></div>
+
+        <div class="step sf-fade">
+          <div class="step-circle">
+            <svg viewBox="0 0 24 24" fill="none"><rect x="3" y="4" width="18" height="18" rx="2" stroke="currentColor" stroke-width="1.8"/><path d="M16 2v4M8 2v4M3 10h18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path d="M9 16l2 2 4-4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </div>
-          <h3>Appointment Scheduling</h3>
-          <p>Allow leads to book appointments seamlessly &amp; get automatic reminders.</p>
+          <div class="step-badge">3</div>
+          <h3>CONVERT</h3>
+          <p>We book meetings and move leads closer to sale.</p>
         </div>
 
-        <div class="scard">
-          <div class="scard-icon scard-icon--purple">
-            <svg viewBox="0 0 24 24" fill="none"><path d="M18 8A6 6 0 006 8c0 7-3 9-3 9h18s-3-2-3-9M13.73 21a2 2 0 01-3.46 0" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </div>
-          <h3>Listing Alerts &amp; Drip Campaigns</h3>
-          <p>Send targeted listing alerts and automated drip campaigns based on buyer interest.</p>
-        </div>
+        <div class="step-dashes"></div>
 
-        <div class="scard">
-          <div class="scard-icon scard-icon--teal">
-            <svg viewBox="0 0 24 24" fill="none"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><polyline points="14 2 14 8 20 8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><line x1="9" y1="13" x2="15" y2="13" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><line x1="9" y1="17" x2="12" y2="17" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        <div class="step sf-fade">
+          <div class="step-circle">
+            <svg viewBox="0 0 24 24" fill="none"><line x1="18" y1="20" x2="18" y2="10" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><line x1="12" y1="20" x2="12" y2="4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><line x1="6" y1="20" x2="6" y2="14" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
           </div>
-          <h3>Transaction Follow-ups</h3>
-          <p>Automate document reminders, updates &amp; follow-ups for smooth transactions.</p>
-        </div>
-
-        <div class="scard">
-          <div class="scard-icon scard-icon--pink">
-            <svg viewBox="0 0 24 24" fill="none"><line x1="18" y1="20" x2="18" y2="10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><line x1="12" y1="20" x2="12" y2="4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><line x1="6" y1="20" x2="6" y2="14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-          </div>
-          <h3>Reports &amp; Analytics</h3>
-          <p>Get real-time insights on lead activity, email performance and pipeline.</p>
+          <div class="step-badge">4</div>
+          <h3>GROW</h3>
+          <p>You close more deals and scale your business.</p>
         </div>
 
       </div>
     </div>
   </section>
 
-  <!-- ── WORKFLOW ───────────────────────────────────────────── -->
-  <section class="workflow">
-    <div class="container workflow-inner">
-      <div class="workflow-text">
-        <h2>Workflows That<br>Work for You</h2>
-        <div class="workflow-underline"></div>
-        <p>We build custom automation workflows that fit your business and help you scale.</p>
+  <!-- ── WHAT WE AUTOMATE ──────────────────────────────────── -->
+  <section class="automate-section" id="services">
+    <div class="container">
+      <div class="section-ornament">
+        <span class="orn-line"></span>
+        <span class="orn-diamond"></span>
+        <span class="orn-line"></span>
       </div>
+      <h2 class="section-heading">WHAT WE AUTOMATE</h2>
 
-      <div class="workflow-steps">
-        <div class="wstep">
-          <div class="wstep-icon wstep-icon--blue">
-            <svg viewBox="0 0 24 24" fill="none"><path d="M16 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="8.5" cy="7" r="4" stroke="currentColor" stroke-width="2"/><line x1="20" y1="8" x2="20" y2="14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><line x1="23" y1="11" x2="17" y2="11" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      <div class="automate-grid">
+
+        <div class="automate-item sf-fade">
+          <div class="automate-icon">
+            <svg viewBox="0 0 24 24" fill="none"><rect x="2" y="4" width="20" height="16" rx="3" stroke="currentColor" stroke-width="1.8"/><path d="M2 8l10 7 10-7" stroke="currentColor" stroke-width="1.8"/></svg>
           </div>
-          <p class="wstep-title">Lead Captured</p>
-          <p class="wstep-sub">From website,<br>portal or ad</p>
+          <h3>INSTANT LEAD<br>RESPONSE</h3>
+          <p>We reply instantly to new inquiries, 24/7.</p>
         </div>
 
-        <div class="wstep-arrow">&rarr;</div>
-
-        <div class="wstep">
-          <div class="wstep-icon wstep-icon--green">
-            <svg viewBox="0 0 24 24" fill="none"><rect x="2" y="4" width="20" height="16" rx="3" stroke="currentColor" stroke-width="2"/><path d="M2 8l10 7 10-7" stroke="currentColor" stroke-width="2"/></svg>
+        <div class="automate-item sf-fade">
+          <div class="automate-icon">
+            <svg viewBox="0 0 24 24" fill="none"><line x1="22" y1="2" x2="11" y2="13" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><polygon points="22 2 15 22 11 13 2 9 22 2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </div>
-          <p class="wstep-title">Instant Email Sent</p>
-          <p class="wstep-sub">Welcome email &amp;<br>property insights</p>
+          <h3>SMART EMAIL<br>FOLLOW-UPS</h3>
+          <p>Automated emails that keep leads engaged.</p>
         </div>
 
-        <div class="wstep-arrow">&rarr;</div>
-
-        <div class="wstep">
-          <div class="wstep-icon wstep-icon--orange">
-            <svg viewBox="0 0 24 24" fill="none"><polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <div class="automate-item sf-fade">
+          <div class="automate-icon">
+            <svg viewBox="0 0 24 24" fill="none"><rect x="3" y="4" width="18" height="18" rx="2" stroke="currentColor" stroke-width="1.8"/><path d="M16 2v4M8 2v4M3 10h18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><circle cx="8" cy="16" r="1.5" fill="currentColor"/><circle cx="12" cy="16" r="1.5" fill="currentColor"/></svg>
           </div>
-          <p class="wstep-title">Nurture &amp; Engage</p>
-          <p class="wstep-sub">Automated follow-ups<br>build relationships</p>
+          <h3>BOOKINGS &amp;<br>APPOINTMENTS</h3>
+          <p>We qualify, schedule and confirm viewings.</p>
         </div>
 
-        <div class="wstep-arrow">&rarr;</div>
-
-        <div class="wstep">
-          <div class="wstep-icon wstep-icon--purple">
-            <svg viewBox="0 0 24 24" fill="none"><rect x="3" y="4" width="18" height="18" rx="2" stroke="currentColor" stroke-width="2"/><path d="M16 2v4M8 2v4M3 10h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M8 14h.01M12 14h.01M8 18h.01" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        <div class="automate-item sf-fade">
+          <div class="automate-icon">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><polyline points="14 2 14 8 20 8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><line x1="9" y1="13" x2="15" y2="13" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><line x1="9" y1="17" x2="12" y2="17" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
           </div>
-          <p class="wstep-title">Appointment Booked</p>
-          <p class="wstep-sub">Lead books a call<br>or site visit</p>
+          <h3>ADMIN &amp; DOCUMENT<br>AUTOMATION</h3>
+          <p>Reports, contracts and more &mdash; generated automatically.</p>
         </div>
 
-        <div class="wstep-arrow">&rarr;</div>
-
-        <div class="wstep">
-          <div class="wstep-icon wstep-icon--teal">
-            <svg viewBox="0 0 24 24" fill="none"><polyline points="20 6 9 17 4 12" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <div class="automate-item sf-fade">
+          <div class="automate-icon">
+            <svg viewBox="0 0 24 24" fill="none"><rect x="3" y="12" width="4" height="9" rx="1" stroke="currentColor" stroke-width="1.8"/><rect x="10" y="7" width="4" height="14" rx="1" stroke="currentColor" stroke-width="1.8"/><rect x="17" y="3" width="4" height="18" rx="1" stroke="currentColor" stroke-width="1.8"/></svg>
           </div>
-          <p class="wstep-title">Deal Closed</p>
-          <p class="wstep-sub">Happy client.<br>More referrals.</p>
+          <h3>REAL-TIME<br>DASHBOARD</h3>
+          <p>Track leads, follow-ups and performance in one place.</p>
         </div>
+
       </div>
     </div>
   </section>
 
-  <!-- ── RESULTS ────────────────────────────────────────────── -->
-  <section class="results">
-    <div class="container results-inner">
-      <div class="results-left">
-        <p class="eyebrow">REAL RESULTS</p>
-        <h2>Automation That<br>Delivers Results</h2>
-        <p>Our clients save time, close more deals and grow their business with systems that work 24/7.</p>
-      </div>
-
-      <div class="results-stats">
-        <div class="rstat">
-          <div class="rstat-icon">
-            <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2"/><path d="M12 7v5l3 3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+  <!-- ── CTA WITH QR CODE ──────────────────────────────────── -->
+  <section class="cta-qr-section" id="contact">
+    <div class="container">
+      <div class="cta-qr-card">
+        <div class="cta-qr-left">
+          <span class="cta-eyebrow">READY TO GROW?</span>
+          <h2>Explore SmartFlow<br>Automation</h2>
+          <div class="cta-rule">
+            <span class="orn-line"></span>
+            <span class="orn-diamond"></span>
           </div>
-          <div class="rstat-num">10+</div>
-          <div class="rstat-label">Hours Saved<br>Every Week</div>
+          <p>Scan the QR code to learn how automation can help your agency save time, respond faster, and convert more leads.</p>
+          <ul class="cta-bullets">
+            <li>More leads</li>
+            <li>Faster response</li>
+            <li>Less admin</li>
+            <li>Better results</li>
+          </ul>
         </div>
-
-        <div class="rstat">
-          <div class="rstat-icon">
-            <svg viewBox="0 0 24 24" fill="none"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><polyline points="17 6 23 6 23 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <div class="cta-qr-right">
+          <div class="qr-card">
+            <img
+              src="https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=https://smartflow-automation.vercel.app&color=1A1F3C&bgcolor=FFFFFF"
+              alt="SmartFlow Automation QR Code"
+              class="qr-img"
+              width="180"
+              height="180"
+            >
+            <button class="btn btn-gold btn-scan book-btn">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><rect x="5" y="2" width="14" height="20" rx="2" stroke="currentColor" stroke-width="2"/><line x1="12" y1="18" x2="12.01" y2="18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+              SCAN ME
+            </button>
           </div>
-          <div class="rstat-num">30–50%</div>
-          <div class="rstat-label">Increase in Lead<br>Conversion</div>
         </div>
-
-        <div class="rstat">
-          <div class="rstat-icon">
-            <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2"/><path d="M12 8v4l3 3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M8 12H5M19 12h-3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-          </div>
-          <div class="rstat-num">2X</div>
-          <div class="rstat-label">More Appointments<br>Booked</div>
-        </div>
-
-        <div class="rstat">
-          <div class="rstat-icon">
-            <svg viewBox="0 0 24 24" fill="none"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="9" cy="7" r="4" stroke="currentColor" stroke-width="2"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-          </div>
-          <div class="rstat-num">100%</div>
-          <div class="rstat-label">Better Client<br>Experience</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ── CTA ───────────────────────────────────────────────── -->
-  <section class="cta-section" id="contact">
-    <div class="container cta-inner">
-      <div class="cta-left">
-        <h2>Ready to Automate Your<br>Real Estate Business?</h2>
-      </div>
-      <div class="cta-mid">
-        <p>Let's build the perfect automation system for your agency.</p>
-      </div>
-      <div class="cta-right">
-        <button class="btn btn-primary btn-lg book-btn">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><rect x="3" y="4" width="18" height="18" rx="2" stroke="currentColor" stroke-width="2"/><path d="M16 2v4M8 2v4M3 10h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-          Book a Free Strategy Call
-        </button>
       </div>
     </div>
   </section>
@@ -340,16 +276,20 @@
     <div class="container footer-inner">
       <div class="footer-brand">
         <a href="#" class="logo logo--light">
-          <div class="logo-icon">
-            <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
-              <rect width="28" height="28" rx="7" fill="#2563EB"/>
-              <path d="M7 19C7 16 10 14 14 14C18 14 21 12 21 9" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
-              <path d="M7 9C7 12 10 14 14 14C18 14 21 16 21 19" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
-            </svg>
-          </div>
+          <svg class="logo-icon" width="40" height="44" viewBox="0 0 40 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="sg2" x1="4" y1="4" x2="36" y2="42" gradientUnits="userSpaceOnUse">
+                <stop offset="0%" stop-color="#14C8FF"/>
+                <stop offset="45%" stop-color="#10E096"/>
+                <stop offset="100%" stop-color="#88EE00"/>
+              </linearGradient>
+            </defs>
+            <path d="M30 6C23 2 9 4 6 13C3 22 11 25 18 28C25 31 33 34 31 42C29 48 15 46 7 42"
+              stroke="url(#sg2)" stroke-width="5.5" stroke-linecap="round" fill="none"/>
+          </svg>
           <div class="logo-text">
             <span class="logo-name">SmartFlow</span>
-            <span class="logo-sub">AUTOMATION</span>
+            <span class="logo-sub">&#8212; AUTOMATION &#8212;</span>
           </div>
         </a>
         <p class="footer-tagline">Automation solutions for real estate agencies to save time, convert more leads and scale with ease.</p>
@@ -413,7 +353,7 @@
 
     <div class="footer-bottom">
       <div class="container">
-        <p>&copy; 2024 SmartFlow Automation. All rights reserved.</p>
+        <p>&copy; 2025 SmartFlow Automation. All rights reserved.</p>
       </div>
     </div>
   </footer>
@@ -534,11 +474,11 @@
             <div class="bk-success-graphic">
               <svg class="bk-success-svg" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <circle class="bk-ring" cx="40" cy="40" r="36"
-                  stroke="#2563EB" stroke-width="4"
+                  stroke="#C4922A" stroke-width="4"
                   stroke-dasharray="226.2" stroke-dashoffset="226.2"
                   stroke-linecap="round" transform="rotate(-90 40 40)"/>
                 <path class="bk-check" d="M24 40l12 12 20-20"
-                  stroke="#2563EB" stroke-width="4.5"
+                  stroke="#C4922A" stroke-width="4.5"
                   stroke-linecap="round" stroke-linejoin="round"
                   stroke-dasharray="47" stroke-dashoffset="47"/>
               </svg>
@@ -551,7 +491,7 @@
               <p class="bk-success-time" id="bk-success-time"></p>
             </div>
             <p class="bk-success-note">A confirmation email is on its way to your inbox.</p>
-            <button class="bk-success-close btn btn-primary" id="bk-success-close">Close</button>
+            <button class="bk-success-close bk-submit-btn" id="bk-success-close" style="margin-top:0">Close</button>
           </div>
         </div>
 
