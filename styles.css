@@ -109,7 +109,7 @@ ul { list-style: none; }
 .nav {
   display: flex;
   align-items: center;
-  height: 220px;
+  height: 520px;
   gap: 32px;
 }
 
@@ -122,13 +122,13 @@ ul { list-style: none; }
 }
 .logo-icon { display: flex; flex-shrink: 0; }
 .logo-img {
-  height: 200px;
+  height: 500px;
   width: auto;
   display: block;
   object-fit: contain;
 }
 .footer .logo-img {
-  height: 180px;
+  height: 450px;
 }
 .logo-text {
   display: flex;
@@ -581,7 +581,7 @@ ul { list-style: none; }
 .mobile-nav {
   display: none;
   position: fixed;
-  top: 220px;
+  top: 520px;
   left: 0;
   right: 0;
   background: var(--white);
