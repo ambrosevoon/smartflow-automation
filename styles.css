@@ -572,7 +572,35 @@ ul { list-style: none; }
 /* ── STATS SECTION ───────────────────────────────────── */
 .stats-section {
   background: var(--navy);
-  padding: 60px 0;
+  padding: 72px 0 60px;
+}
+
+.stats-intro {
+  text-align: center;
+  margin-bottom: 56px;
+}
+.stats-intro-eyebrow {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  color: var(--gold);
+  text-transform: uppercase;
+  margin-bottom: 14px;
+}
+.stats-intro-heading {
+  font-size: clamp(1.35rem, 2.4vw, 1.9rem);
+  font-weight: 700;
+  color: var(--white);
+  letter-spacing: 0.2px;
+  margin-bottom: 16px;
+  line-height: 1.25;
+}
+.stats-intro-sub {
+  font-size: 0.95rem;
+  color: rgba(255,255,255,.58);
+  max-width: 580px;
+  margin: 0 auto;
+  line-height: 1.7;
 }
 
 .stats-grid {
