@@ -109,7 +109,7 @@ ul { list-style: none; }
   display: flex;
   align-items: center;
   height: 90px;
-  gap: 32px;
+  gap: 24px;
 }
 
 /* Logo */
@@ -121,7 +121,7 @@ ul { list-style: none; }
 }
 .logo-icon { display: flex; flex-shrink: 0; }
 .logo-img {
-  height: 80px;
+  height: 108px;
   width: auto;
   display: block;
   object-fit: contain;
