@@ -121,6 +121,12 @@ ul { list-style: none; }
   flex-shrink: 0;
 }
 .logo-icon { display: flex; flex-shrink: 0; }
+.logo-img {
+  height: 44px;
+  width: auto;
+  display: block;
+  object-fit: contain;
+}
 .logo-text {
   display: flex;
   flex-direction: column;
@@ -460,110 +466,6 @@ ul { list-style: none; }
   line-height: 1.65;
 }
 
-/* ── CTA WITH QR CODE ────────────────────────────────── */
-.cta-qr-section {
-  padding: 80px 0;
-  background: var(--cream);
-}
-
-.cta-qr-card {
-  background: var(--white);
-  border: 1px solid var(--border);
-  border-radius: 16px;
-  padding: 56px 60px;
-  display: grid;
-  grid-template-columns: 1fr auto;
-  gap: 64px;
-  align-items: center;
-  box-shadow: var(--shadow);
-}
-
-.cta-eyebrow {
-  display: block;
-  font-size: 0.68rem;
-  font-weight: 800;
-  letter-spacing: 2.5px;
-  color: var(--gold);
-  text-transform: uppercase;
-  margin-bottom: 16px;
-}
-
-.cta-qr-left h2 {
-  font-size: clamp(1.7rem, 2.6vw, 2.3rem);
-  font-weight: 800;
-  color: var(--navy);
-  line-height: 1.25;
-  letter-spacing: -0.5px;
-}
-
-.cta-rule {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  margin: 20px 0 22px;
-}
-
-.cta-qr-left p {
-  font-size: 0.9rem;
-  color: var(--muted);
-  line-height: 1.72;
-  max-width: 420px;
-  margin-bottom: 24px;
-}
-
-.cta-bullets {
-  display: flex;
-  flex-direction: column;
-  gap: 11px;
-}
-.cta-bullets li {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  font-size: 0.9rem;
-  font-weight: 600;
-  color: var(--navy);
-}
-.cta-bullets li::before {
-  content: '';
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  background-color: var(--gold);
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none'%3E%3Cpolyline points='20 6 9 17 4 12' stroke='white' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
-  background-size: 12px 12px;
-  background-repeat: no-repeat;
-  background-position: center;
-  flex-shrink: 0;
-}
-
-/* QR card */
-.qr-card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 20px;
-  background: var(--white);
-  border: 1px solid var(--border);
-  border-radius: 14px;
-  padding: 28px 24px;
-  box-shadow: var(--shadow-sm);
-  min-width: 200px;
-}
-
-.qr-img {
-  border-radius: 8px;
-  border: 1px solid var(--border);
-  display: block;
-}
-
-.btn-scan {
-  width: 100%;
-  justify-content: center;
-  padding: 12px 20px;
-  font-size: 0.82rem;
-}
-
 /* ── FOOTER ──────────────────────────────────────────── */
 .footer {
   background: var(--navy);
@@ -736,11 +638,6 @@ ul { list-style: none; }
   .benefit-item:nth-child(4) { border-top: 1px solid var(--border); }
   .benefit-item:nth-child(4) { border-right: none; }
 
-  /* CTA QR stacks */
-  .cta-qr-card { grid-template-columns: 1fr; gap: 40px; justify-items: center; text-align: center; }
-  .cta-rule { justify-content: center; }
-  .cta-bullets { align-items: center; }
-  .cta-qr-left p { margin-left: auto; margin-right: auto; }
 }
 
 @media (max-width: 720px) {
@@ -763,7 +660,6 @@ ul { list-style: none; }
   .footer-inner { grid-template-columns: 1fr 1fr; }
   .footer-brand { grid-column: 1 / -1; }
 
-  .cta-qr-card { padding: 40px 28px; }
 }
 
 @media (max-width: 520px) {
@@ -773,7 +669,6 @@ ul { list-style: none; }
   .automate-item { border-right: none !important; }
   .automate-item + .automate-item { border-top: 1px solid var(--border) !important; }
   .footer-inner { grid-template-columns: 1fr; }
-  .qr-card { width: 100%; max-width: 220px; }
 }
 
 /* ================================================================
